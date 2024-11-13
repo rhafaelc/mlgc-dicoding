@@ -1,4 +1,4 @@
-const postPredictHandler = require("./handler");
+const { postPredictHandler, getPredictHistoriesHandler } = require("./handler");
 
 const routes = [
   {
@@ -13,6 +13,11 @@ const routes = [
         maxBytes: 1000000,
       },
     },
+  },
+  {
+    path: "/predict/histories",
+    method: "GET",
+    handler: getPredictHistoriesHandler,
   },
 ];
 
